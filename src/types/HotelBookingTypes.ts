@@ -5,9 +5,16 @@ export interface BoardType {
     price: number
 }
 
+export interface RestCountry {
+    name: string;
+    demonym: string;
+    alpha3Code: string;
+}
+
 export interface Country {
     id: string;
     name: string;
+    citizen: string;
 }
 
 export interface Hotel {

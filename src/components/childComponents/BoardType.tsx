@@ -11,6 +11,7 @@ function BoardType({ setBType, boardTypes }: BoardTypeProp) {
     return (
         <div>
             <div className="flex flex-col gap-1">
+                <label htmlFor="" className="mt-5">Select your Board Type</label>
                 {boardTypes?.map(bt => (
                     <div key={bt.code} className="flex items-center cursor-pointer w-fit">
                         <input

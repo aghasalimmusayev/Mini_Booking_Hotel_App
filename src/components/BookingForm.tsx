@@ -1,12 +1,13 @@
 import { useEffect, useState } from "react"
 import { useAppDispatch, useAppSelector } from "../hooks/SliceHook"
 import { fetchCountries } from "../redux/slices/CountrySlice"
-import { fetchBoardTypes } from "../redux/slices/BoardTypes"
+import { fetchBoardTypes } from "../redux/slices/BoardTypesSlice"
 import { fetchHotels } from "../redux/slices/HotelSlice"
 import { Hotel } from '../types/HotelBookingTypes'
 import Calendar from "./childComponents/Calendar"
 import BoardType from "./childComponents/BoardType"
 import Summary from "./childComponents/Summary"
+import { fetchCitizens } from "../redux/slices/CitizenSlice"
 
 function BookingForm() {
     const dispatch = useAppDispatch()
@@ -14,10 +15,13 @@ function BookingForm() {
         dispatch(fetchCountries())
         dispatch(fetchBoardTypes())
         dispatch(fetchHotels())
+        dispatch(fetchCitizens())
     }, [dispatch])
     const countryData = useAppSelector((state => state.countries.items))
     const boardTypes = useAppSelector((state) => state.boardTypes.items)
     const hotels = useAppSelector((state) => state.hotels.items)
+    const citizens = useAppSelector((state) => state.citizens.items)
+    const citizenName = citizens.map(c => c.citizen)
     const [day, setDay] = useState(0)
     const [bType, setBType] = useState('')
     const [citizen, setCitizen] = useState('')
@@ -52,11 +56,13 @@ function BookingForm() {
                         id=""
                         onChange={(e) => setCitizen(e.target.value)}
                         value={citizen}
-                        className="w-40 bg-slate-100 p-2 rounded">
+                        className="w-[250px] bg-slate-100 p-2 rounded">
                         <option value="" hidden>Your Citizen</option>
-                        {countryData?.map(c => (
-                            <option key={c.id} value={c.name}>{c.name}</option>
-                        ))}
+                        {citizenName?.
+                            sort()
+                            .map((c, index) => (
+                                <option key={index} value={c}>{c}</option>
+                            ))}
                     </select>
                 </div>
                 <div>
@@ -66,22 +72,25 @@ function BookingForm() {
                         id=""
                         onChange={(e) => setCountry(e.target.value)}
                         value={country}
-                        className="w-40 bg-slate-100 p-2 rounded">
-                        <option value="" hidden>Select Country</option>
-                        {countryData?.map(c => (
+                        className="w-[250px] bg-slate-100 p-2 rounded">
+                        <option value="" hidden>Destination Country</option>
+                        {countryData?.map((c) => (
                             <option key={c.id} value={c.name}>{c.name}</option>
                         ))}
                     </select>
                 </div>
                 {country &&
-                    <select name=""
-                        className="w-[240px] p-2 rounded bg-slate-100"
-                        onChange={(e) => setHotelName(e.target.value)}>
-                        <option value="" hidden>Select Hotel in {country}</option>
-                        {hotelsByCountry(country).map(h => (
-                            <option key={h.id} value={h.name}>{h.name}</option>
-                        ))}
-                    </select>
+                    <div>
+                        <label htmlFor="" className="inline-block w-20">Hotel</label>
+                        <select name=""
+                            className="w-[250px] p-2 rounded bg-slate-100"
+                            onChange={(e) => setHotelName(e.target.value)}>
+                            <option value="" hidden>Select Hotel in {country}</option>
+                            {hotelsByCountry(country).map(h => (
+                                <option key={h.id} value={h.name}>{h.name}</option>
+                            ))}
+                        </select>
+                    </div>
                 }
                 <Calendar day={day} setDay={setDay} />
                 <BoardType setBType={setBType} boardTypes={boardTypes} />
