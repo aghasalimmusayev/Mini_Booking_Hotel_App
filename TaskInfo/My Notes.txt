@@ -29,6 +29,19 @@ Price breakdown:
 Grand total: 390
 
 6. Unit test with Jest
+	✅ Pure funksiyalar
+		+ calcTotal (etmisən)
+		hotelsByCountry (extract edib test etmək)
+		calculateDays (Calendar-da varsa, onu çıxarıb test etmək)
+	✅ Redux slice-lar
+		CountrySlice – initial state + fetchCountries.fulfilled
+		HotelSlice – eyni yanaşma
+		BoardTypesSlice/CitizenSlice – heç olmasa hərəsindən bir test
+	✅ Child componentlər
+		Summary – doğru məlumatı göstərir
+		BoardType – callback düzgün çağrılır
+	✅ 1 dənə BookingForm integration testi
+		“End-to-end” kimi, amma frontend daxilində
 7. Loading state
 8. Export information in pdf 
 9. Writing README file

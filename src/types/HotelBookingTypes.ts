@@ -14,7 +14,7 @@ export interface RestCountry {
 export interface Country {
     id: string;
     name: string;
-    citizen: string;
+    citizen?: string;
 }
 
 export interface Hotel {

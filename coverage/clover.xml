@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<coverage generated="1764875383411" clover="3.2.0">
+  <project timestamp="1764875383411" name="All files">
+    <metrics statements="41" coveredstatements="28" conditionals="20" coveredconditionals="20" methods="18" coveredmethods="10" elements="79" coveredelements="58" complexity="0" loc="41" ncloc="41" packages="2" files="4" classes="4"/>
+    <package name="redux.slices">
+      <metrics statements="32" coveredstatements="19" conditionals="0" coveredconditionals="0" methods="14" coveredmethods="6"/>
+      <file name="CountrySlice.ts" path="C:\Users\aga77\Desktop\HotelBooking\src\redux\slices\CountrySlice.ts">
+        <metrics statements="16" coveredstatements="11" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="4"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="30" count="1" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="36" count="1" type="stmt"/>
+        <line num="39" count="1" type="stmt"/>
+        <line num="40" count="1" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+      </file>
+      <file name="HotelSlice.ts" path="C:\Users\aga77\Desktop\HotelBooking\src\redux\slices\HotelSlice.ts">
+        <metrics statements="16" coveredstatements="8" conditionals="0" coveredconditionals="0" methods="7" coveredmethods="2"/>
+        <line num="1" count="1" type="stmt"/>
+        <line num="10" count="1" type="stmt"/>
+        <line num="16" count="1" type="stmt"/>
+        <line num="18" count="0" type="stmt"/>
+        <line num="19" count="0" type="stmt"/>
+        <line num="20" count="0" type="stmt"/>
+        <line num="21" count="0" type="stmt"/>
+        <line num="25" count="1" type="stmt"/>
+        <line num="30" count="3" type="stmt"/>
+        <line num="34" count="1" type="stmt"/>
+        <line num="36" count="0" type="stmt"/>
+        <line num="39" count="0" type="stmt"/>
+        <line num="40" count="0" type="stmt"/>
+        <line num="43" count="0" type="stmt"/>
+        <line num="48" count="1" type="stmt"/>
+        <line num="50" count="1" type="stmt"/>
+      </file>
+    </package>
+    <package name="utils">
+      <metrics statements="9" coveredstatements="9" conditionals="20" coveredconditionals="20" methods="4" coveredmethods="4"/>
+      <file name="calcTotal.ts" path="C:\Users\aga77\Desktop\HotelBooking\src\utils\calcTotal.ts">
+        <metrics statements="4" coveredstatements="4" conditionals="16" coveredconditionals="16" methods="1" coveredmethods="1"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="8" count="4" type="cond" truecount="8" falsecount="0"/>
+        <line num="9" count="4" type="cond" truecount="8" falsecount="0"/>
+        <line num="10" count="4" type="stmt"/>
+      </file>
+      <file name="hotelsByCountry.ts" path="C:\Users\aga77\Desktop\HotelBooking\src\utils\hotelsByCountry.ts">
+        <metrics statements="5" coveredstatements="5" conditionals="4" coveredconditionals="4" methods="3" coveredmethods="3"/>
+        <line num="3" count="1" type="stmt"/>
+        <line num="8" count="4" type="cond" truecount="2" falsecount="0"/>
+        <line num="10" count="5" type="stmt"/>
+        <line num="11" count="3" type="cond" truecount="2" falsecount="0"/>
+        <line num="13" count="6" type="stmt"/>
+      </file>
+    </package>
+  </project>
+</coverage>
