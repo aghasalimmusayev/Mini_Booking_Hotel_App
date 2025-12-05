@@ -58,4 +58,9 @@
         npm install
         npm run dev
 
+7. # Jest testing
+        calcTotal function has been tested
+        hotelsByCountry has been tested
+        CountrySlice has been tested
+        HotelSlice has been tested
 

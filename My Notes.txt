@@ -1,4 +1,4 @@
-+1. vetendasioldugu olkeni secir
++1. vetendasi oldugu olkeni secir
 +2. baslangic tarix secilecek ve nece gun qalacagini teyin edecek
 +3. destination country - hansi olkede hotel qalacaqini secir
 +4. board type, radio selection (FB,HB,NB) - secilene gore description cixmalidir
@@ -28,20 +28,20 @@ Price breakdown:
 
 Grand total: 390
 
-6. Unit test with Jest
++6. Unit test with Jest
 	✅ Pure funksiyalar
 		+ calcTotal (etmisən)
-		hotelsByCountry (extract edib test etmək)
-		calculateDays (Calendar-da varsa, onu çıxarıb test etmək)
+		+ hotelsByCountry (extract edib test etmək)
+		- calculateDays (Calendar-da varsa, onu çıxarıb test etmək)
 	✅ Redux slice-lar
-		CountrySlice – initial state + fetchCountries.fulfilled
-		HotelSlice – eyni yanaşma
-		BoardTypesSlice/CitizenSlice – heç olmasa hərəsindən bir test
+		+ CountrySlice – initial state + fetchCountries.fulfilled
+		+ HotelSlice – eyni yanaşma
+		- BoardTypesSlice/CitizenSlice – heç olmasa hərəsindən bir test
 	✅ Child componentlər
-		Summary – doğru məlumatı göstərir
-		BoardType – callback düzgün çağrılır
+		- Summary – doğru məlumatı göstərir
+		- BoardType – callback düzgün çağrılır
 	✅ 1 dənə BookingForm integration testi
-		“End-to-end” kimi, amma frontend daxilində
+		- “End-to-end” kimi, amma frontend daxilində
 7. Loading state
 8. Export information in pdf 
-9. Writing README file
++9. Writing README file
